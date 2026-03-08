@@ -6,10 +6,10 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
-    <title>Privacy Policy | Merge Chickens</title>
+    <title>Privacy Policy | Egg Factory : Farm Idle</title>
     <meta
       name="description"
-      content="Privacy Policy for Merge Chickens mobile game."
+      content="Privacy Policy for Egg Factory : Farm Idle mobile game."
     />
     <style>
       :root {
@@ -50,6 +50,82 @@
         max-width: 980px;
         margin: 0 auto;
         padding: 48px 20px 72px;
+        position: relative;
+      }
+
+      .lang-toggle-wrap {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 18px;
+      }
+
+      .lang-toggle {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 10px 14px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.72);
+        border: 1px solid var(--border);
+        box-shadow: var(--shadow);
+        backdrop-filter: blur(10px);
+      }
+
+      .lang-label {
+        font-size: 13px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        min-width: 22px;
+        text-align: center;
+        user-select: none;
+      }
+
+      .switch {
+        position: relative;
+        width: 64px;
+        height: 36px;
+        display: inline-block;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        inset: 0;
+        cursor: pointer;
+        background: linear-gradient(180deg, #f8d77c, #efb321);
+        border-radius: 999px;
+        transition: 0.25s ease;
+        box-shadow: inset 0 1px 2px rgba(255,255,255,0.55);
+      }
+
+      .slider::before {
+        content: "EN";
+        position: absolute;
+        height: 28px;
+        width: 28px;
+        left: 4px;
+        top: 4px;
+        border-radius: 50%;
+        background: #fffdf9;
+        color: #6a4700;
+        font-size: 10px;
+        font-weight: 900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.16);
+        transition: 0.25s ease;
+      }
+
+      .switch input:checked + .slider::before {
+        transform: translateX(28px);
+        content: "TR";
       }
 
       .hero {
@@ -263,16 +339,31 @@
         li {
           font-size: 15px;
         }
+
+        .lang-toggle-wrap {
+          margin-bottom: 14px;
+        }
       }
     </style>
   </head>
   <body>
     <main class="page">
+      <div class="lang-toggle-wrap">
+        <div class="lang-toggle">
+          <span class="lang-label">EN</span>
+          <label class="switch" aria-label="Language switch">
+            <input type="checkbox" id="languageToggle" />
+            <span class="slider"></span>
+          </label>
+          <span class="lang-label">TR</span>
+        </div>
+      </div>
+
       <section class="hero">
-        <div class="eyebrow">🐣 Merge Chickens • Privacy Policy</div>
-        <h1>Your privacy matters.</h1>
-        <p>
-          Merge Chickens is designed as a simple single-player mobile game.
+        <div class="eyebrow" data-i18n="eyebrow">🐣 Egg Factory : Farm Idle • Privacy Policy</div>
+        <h1 data-i18n="heroTitle">Your privacy matters.</h1>
+        <p data-i18n="heroDesc">
+          Egg Factory : Farm Idle is designed as a simple single-player mobile game.
           We believe privacy should be clear, transparent, and easy to understand.
           This page explains how information is handled when you use the app.
         </p>
@@ -281,19 +372,19 @@
       <section class="content-card">
         <div class="meta">
           <div class="meta-box">
-            <div class="meta-label">Last Updated</div>
-            <div class="meta-value">08 March 2026</div>
+            <div class="meta-label" data-i18n="lastUpdatedLabel">Last Updated</div>
+            <div class="meta-value" data-i18n="lastUpdatedValue">08 March 2026</div>
           </div>
           <div class="meta-box">
-            <div class="meta-label">App Name</div>
-            <div class="meta-value">Merge Chickens</div>
+            <div class="meta-label" data-i18n="appNameLabel">App Name</div>
+            <div class="meta-value">Egg Factory : Farm Idle</div>
           </div>
         </div>
 
         <div class="section">
-          <h2><span class="icon">ℹ️</span> Overview</h2>
-          <p>
-            Merge Chickens (“the App”) is a single-player mobile game developed
+          <h2><span class="icon">ℹ️</span> <span data-i18n="overviewTitle">Overview</span></h2>
+          <p data-i18n="overviewText">
+            Egg Factory : Farm Idle (“the App”) is a single-player mobile game developed
             to provide a fun and lightweight gameplay experience.
             This Privacy Policy explains what information is collected, how it is used,
             and how it is stored.
@@ -301,72 +392,69 @@
         </div>
 
         <div class="section">
-          <h2><span class="icon">🔒</span> Information Collection</h2>
-          <p>
-            We <span class="highlight">do not collect, store, transmit, or share any personal information</span>
-            through Merge Chickens.
+          <h2><span class="icon">🔒</span> <span data-i18n="collectionTitle">Information Collection</span></h2>
+          <p data-i18n="collectionIntro">
+            We do not collect, store, transmit, or share any personal information through Egg Factory : Farm Idle.
           </p>
-          <p>The App does not require:</p>
+          <p data-i18n="collectionListIntro">The App does not require:</p>
           <ul>
-            <li>Account registration</li>
-            <li>Login credentials</li>
-            <li>Email address submission</li>
-            <li>Name, phone number, or personal profile details</li>
+            <li data-i18n="collectionItem1">Account registration</li>
+            <li data-i18n="collectionItem2">Login credentials</li>
+            <li data-i18n="collectionItem3">Email address submission</li>
+            <li data-i18n="collectionItem4">Name, phone number, or personal profile details</li>
           </ul>
-          <p>
-            No personal data is collected during gameplay.
-          </p>
+          <p data-i18n="collectionOutro">No personal data is collected during gameplay.</p>
         </div>
 
         <div class="section">
-          <h2><span class="icon">📱</span> Local Storage</h2>
-          <p>
+          <h2><span class="icon">📱</span> <span data-i18n="localTitle">Local Storage</span></h2>
+          <p data-i18n="localIntro">
             All gameplay-related data, such as game progress, gold, chickens,
-            and settings, is stored <span class="highlight">locally on your device only</span>.
+            and settings, is stored locally on your device only.
           </p>
-          <p>This data:</p>
+          <p data-i18n="localListIntro">This data:</p>
           <ul>
-            <li>Is not uploaded to any server</li>
-            <li>Is not accessible by the developer</li>
-            <li>Remains entirely on your own device</li>
+            <li data-i18n="localItem1">Is not uploaded to any server</li>
+            <li data-i18n="localItem2">Is not accessible by the developer</li>
+            <li data-i18n="localItem3">Remains entirely on your own device</li>
           </ul>
-          <p>
+          <p data-i18n="localOutro">
             If you delete the App, locally stored game data may also be removed
             depending on your device settings.
           </p>
         </div>
 
         <div class="section">
-          <h2><span class="icon">🧩</span> Third-Party Services</h2>
-          <p>
-            Merge Chickens does not use third-party services for:
+          <h2><span class="icon">🧩</span> <span data-i18n="thirdPartyTitle">Third-Party Services</span></h2>
+          <p data-i18n="thirdPartyIntro">
+            Egg Factory : Farm Idle does not use third-party services for:
           </p>
           <ul>
-            <li>Analytics</li>
-            <li>Advertising</li>
-            <li>Tracking</li>
-            <li>User profiling</li>
+            <li data-i18n="thirdPartyItem1">Analytics</li>
+            <li data-i18n="thirdPartyItem2">Advertising</li>
+            <li data-i18n="thirdPartyItem3">Tracking</li>
+            <li data-i18n="thirdPartyItem4">User profiling</li>
           </ul>
-          <p>
+          <p data-i18n="thirdPartyOutro">
             The App operates without external data-sharing tools or integrations.
           </p>
         </div>
 
         <div class="section">
-          <h2><span class="icon">👶</span> Children’s Privacy</h2>
-          <p>
+          <h2><span class="icon">👶</span> <span data-i18n="childrenTitle">Children’s Privacy</span></h2>
+          <p data-i18n="childrenIntro">
             The App does not collect personal information from users of any age,
             including children.
           </p>
-          <p>
-            Because no personal information is collected, Merge Chickens is designed
+          <p data-i18n="childrenOutro">
+            Because no personal information is collected, Egg Factory : Farm Idle is designed
             to be privacy-friendly for all players.
           </p>
         </div>
 
         <div class="section">
-          <h2><span class="icon">📝</span> Changes to This Policy</h2>
-          <p>
+          <h2><span class="icon">📝</span> <span data-i18n="changesTitle">Changes to This Policy</span></h2>
+          <p data-i18n="changesText">
             We may update this Privacy Policy from time to time.
             Any future changes will be posted on this page, and the
             “Last Updated” date at the top will be revised accordingly.
@@ -374,8 +462,8 @@
         </div>
 
         <div class="section">
-          <h2><span class="icon">✉️</span> Contact</h2>
-          <p>
+          <h2><span class="icon">✉️</span> <span data-i18n="contactTitle">Contact</span></h2>
+          <p data-i18n="contactText">
             If you have any questions about this Privacy Policy or the App,
             you can contact us at:
           </p>
@@ -385,9 +473,145 @@
         </div>
       </section>
 
-      <footer>
-        © 2026 Merge Chickens. All rights reserved.
+      <footer data-i18n="footer">
+        © 2026 Egg Factory : Farm Idle. All rights reserved.
       </footer>
     </main>
+
+    <script>
+      const translations = {
+        en: {
+          eyebrow: "🐣 Egg Factory : Farm Idle • Privacy Policy",
+          heroTitle: "Your privacy matters.",
+          heroDesc:
+            "Egg Factory : Farm Idle is designed as a simple single-player mobile game. We believe privacy should be clear, transparent, and easy to understand. This page explains how information is handled when you use the app.",
+          lastUpdatedLabel: "Last Updated",
+          lastUpdatedValue: "08 March 2026",
+          appNameLabel: "App Name",
+          overviewTitle: "Overview",
+          overviewText:
+            "Egg Factory : Farm Idle (“the App”) is a single-player mobile game developed to provide a fun and lightweight gameplay experience. This Privacy Policy explains what information is collected, how it is used, and how it is stored.",
+          collectionTitle: "Information Collection",
+          collectionIntro:
+            "We do not collect, store, transmit, or share any personal information through Egg Factory : Farm Idle.",
+          collectionListIntro: "The App does not require:",
+          collectionItem1: "Account registration",
+          collectionItem2: "Login credentials",
+          collectionItem3: "Email address submission",
+          collectionItem4: "Name, phone number, or personal profile details",
+          collectionOutro: "No personal data is collected during gameplay.",
+          localTitle: "Local Storage",
+          localIntro:
+            "All gameplay-related data, such as game progress, gold, chickens, and settings, is stored locally on your device only.",
+          localListIntro: "This data:",
+          localItem1: "Is not uploaded to any server",
+          localItem2: "Is not accessible by the developer",
+          localItem3: "Remains entirely on your own device",
+          localOutro:
+            "If you delete the App, locally stored game data may also be removed depending on your device settings.",
+          thirdPartyTitle: "Third-Party Services",
+          thirdPartyIntro:
+            "Egg Factory : Farm Idle does not use third-party services for:",
+          thirdPartyItem1: "Analytics",
+          thirdPartyItem2: "Advertising",
+          thirdPartyItem3: "Tracking",
+          thirdPartyItem4: "User profiling",
+          thirdPartyOutro:
+            "The App operates without external data-sharing tools or integrations.",
+          childrenTitle: "Children’s Privacy",
+          childrenIntro:
+            "The App does not collect personal information from users of any age, including children.",
+          childrenOutro:
+            "Because no personal information is collected, Egg Factory : Farm Idle is designed to be privacy-friendly for all players.",
+          changesTitle: "Changes to This Policy",
+          changesText:
+            "We may update this Privacy Policy from time to time. Any future changes will be posted on this page, and the “Last Updated” date at the top will be revised accordingly.",
+          contactTitle: "Contact",
+          contactText:
+            "If you have any questions about this Privacy Policy or the App, you can contact us at:",
+          footer: "© 2026 Egg Factory : Farm Idle. All rights reserved."
+        },
+        tr: {
+          eyebrow: "🐣 Egg Factory : Farm Idle • Gizlilik Politikası",
+          heroTitle: "Gizliliğiniz bizim için önemlidir.",
+          heroDesc:
+            "Egg Factory : Farm Idle, basit ve tek oyunculu bir mobil oyun olarak tasarlanmıştır. Gizliliğin açık, şeffaf ve kolay anlaşılır olması gerektiğine inanıyoruz. Bu sayfa, uygulamayı kullandığınızda bilgilerinizin nasıl işlendiğini açıklar.",
+          lastUpdatedLabel: "Son Güncelleme",
+          lastUpdatedValue: "08 Mart 2026",
+          appNameLabel: "Uygulama Adı",
+          overviewTitle: "Genel Bakış",
+          overviewText:
+            "Egg Factory : Farm Idle (“Uygulama”), eğlenceli ve hafif bir oyun deneyimi sunmak amacıyla geliştirilmiş tek oyunculu bir mobil oyundur. Bu Gizlilik Politikası, hangi bilgilerin toplandığını, nasıl kullanıldığını ve nasıl saklandığını açıklar.",
+          collectionTitle: "Bilgi Toplama",
+          collectionIntro:
+            "Egg Factory : Farm Idle üzerinden hiçbir kişisel bilgi toplamıyor, saklamıyor, aktarmıyor veya paylaşmıyoruz.",
+          collectionListIntro: "Uygulama şunları gerektirmez:",
+          collectionItem1: "Hesap oluşturma",
+          collectionItem2: "Giriş bilgileri",
+          collectionItem3: "E-posta adresi girilmesi",
+          collectionItem4: "İsim, telefon numarası veya kişisel profil bilgileri",
+          collectionOutro: "Oyun sırasında hiçbir kişisel veri toplanmaz.",
+          localTitle: "Yerel Depolama",
+          localIntro:
+            "Oyun ilerlemesi, altın, tavuklar ve ayarlar gibi oyunla ilgili tüm veriler yalnızca cihazınızda yerel olarak saklanır.",
+          localListIntro: "Bu veriler:",
+          localItem1: "Hiçbir sunucuya yüklenmez",
+          localItem2: "Geliştirici tarafından erişilemez",
+          localItem3: "Tamamen sizin cihazınızda kalır",
+          localOutro:
+            "Uygulamayı silerseniz, cihaz ayarlarınıza bağlı olarak yerel olarak saklanan oyun verileri de silinebilir.",
+          thirdPartyTitle: "Üçüncü Taraf Hizmetler",
+          thirdPartyIntro:
+            "Egg Factory : Farm Idle aşağıdaki amaçlar için üçüncü taraf hizmetleri kullanmaz:",
+          thirdPartyItem1: "Analitik",
+          thirdPartyItem2: "Reklam",
+          thirdPartyItem3: "Takip",
+          thirdPartyItem4: "Kullanıcı profilleme",
+          thirdPartyOutro:
+            "Uygulama, harici veri paylaşım araçları veya entegrasyonlar olmadan çalışır.",
+          childrenTitle: "Çocukların Gizliliği",
+          childrenIntro:
+            "Uygulama, çocuklar dahil olmak üzere hiçbir yaştan kullanıcıdan kişisel bilgi toplamaz.",
+          childrenOutro:
+            "Hiçbir kişisel bilgi toplanmadığı için Egg Factory : Farm Idle tüm oyuncular için gizlilik dostu olacak şekilde tasarlanmıştır.",
+          changesTitle: "Bu Politikadaki Değişiklikler",
+          changesText:
+            "Bu Gizlilik Politikası zaman zaman güncellenebilir. Gelecekte yapılacak değişiklikler bu sayfada yayınlanacak ve üstte yer alan “Son Güncelleme” tarihi buna göre yenilenecektir.",
+          contactTitle: "İletişim",
+          contactText:
+            "Bu Gizlilik Politikası veya uygulama hakkında herhangi bir sorunuz varsa, bizimle şu e-posta adresi üzerinden iletişime geçebilirsiniz:",
+          footer: "© 2026 Egg Factory : Farm Idle. Tüm hakları saklıdır."
+        }
+      };
+
+      const toggle = document.getElementById("languageToggle");
+      const elements = document.querySelectorAll("[data-i18n]");
+
+      function setLanguage(lang) {
+        document.documentElement.lang = lang;
+
+        elements.forEach((element) => {
+          const key = element.getAttribute("data-i18n");
+          if (translations[lang][key]) {
+            element.textContent = translations[lang][key];
+          }
+        });
+
+        document.title =
+          lang === "tr"
+            ? "Gizlilik Politikası | Egg Factory : Farm Idle"
+            : "Privacy Policy | Egg Factory : Farm Idle";
+      }
+
+      toggle.addEventListener("change", function () {
+        if (this.checked) {
+          setLanguage("tr");
+        } else {
+          setLanguage("en");
+        }
+      });
+
+      setLanguage("en");
+    </script>
   </body>
 </html>
